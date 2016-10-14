@@ -21,7 +21,7 @@
 //动态广告
 #define JpgImageUrl2 @"http://c.hiphotos.baidu.com/image/pic/item/d62a6059252dd42a6a943c180b3b5bb5c8eab8e7.jpg"
 
-static float _animationDuration = 0.8f;
+static float _animationDuration = 0.5f;
 
 @interface CCLaunchAnimation ()
 
@@ -109,12 +109,26 @@ static float _animationDuration = 0.8f;
     
 //    __weak __typeof(self) weakSelf = self;
     UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"logo_text"]];
-    imageView.center = self.view.center;
     [self.view addSubview:imageView];
+    
+    /**
+     *  使用约束来进行动画
+     */
+    [imageView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.centerY.equalTo(self.view.mas_centerY).offset(-50);
+    }];
+    
+    [self.view layoutIfNeeded];
+    
+    [imageView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.centerY.equalTo(self.view.mas_bottom).offset(-50);
+    }];
     
     [UIView animateWithDuration:_animationDuration delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         //位移动画和比例缩小动画
-        imageView.center = CGPointMake(imageView.center.x, self.view.bounds.size.height-(100-imageView.image.size.height)/2-imageView.image.size.height/2);
+        [self.view layoutIfNeeded];
         imageView.transform = CGAffineTransformScale(imageView.transform, 0.72, 0.72);
     } completion:^(BOOL finished) {
         //动画完成后需要现实广告图片
