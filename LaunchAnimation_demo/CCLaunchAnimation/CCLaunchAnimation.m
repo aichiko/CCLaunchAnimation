@@ -9,9 +9,10 @@
 #import "CCLaunchAnimation.h"
 #import <QuartzCore/CAAnimation.h>
 #import <QuartzCore/QuartzCore.h>
-#import <SDWebImage/SDWebImageManager.h>
-#import <SDWebImage/UIImage+MultiFormat.h>
-#import <Masonry.h>
+#import "SDWebImage/SDWebImageManager.h"
+#import "SDWebImage/UIImage+MultiFormat.h"
+#import "SDWebImageDownloader.h"
+#import "Masonry.h"
 
 //gif图
 #define GifImageUrl @"http://img0.tuicool.com/beEBRnv.gif"
@@ -153,8 +154,8 @@ static float _animationDuration = 0.5f;
         cache.maxMemoryCountLimit = 1;
         SDWebImageManager *manager = [[SDWebImageManager alloc]initWithCache:cache downloader:downloader];
         
-        [manager downloadImageWithURL:imageURL options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-        } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+        [manager.imageDownloader downloadImageWithURL:imageURL options:SDWebImageDownloaderUseNSURLCache progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+        } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
             NSLog(@"缓存的图片个数为 %ld",[cache getDiskCount]);
             if (error) {
                 //如果3秒内没有下载下来，判断网络问题，不进行加载广告页面
@@ -164,6 +165,7 @@ static float _animationDuration = 0.5f;
                 self.advertImage = image;
             }
         }];
+        
     });
 }
 
