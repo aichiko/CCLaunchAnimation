@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		808CBF9464822449A066BD2A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A674031BD9606F3179881AE9 /* libPods.a */; };
+		D5728AD71F4FFC3300EF522B /* CCLaunchAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D5728AD61F4FFC3300EF522B /* CCLaunchAnimation.m */; };
 		D5C45B091DAC6D2E002DB20F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C45B081DAC6D2E002DB20F /* main.m */; };
 		D5C45B0C1DAC6D2E002DB20F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C45B0B1DAC6D2E002DB20F /* AppDelegate.m */; };
 		D5C45B0F1DAC6D2E002DB20F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C45B0E1DAC6D2E002DB20F /* ViewController.m */; };
@@ -16,7 +17,6 @@
 		D5C45B171DAC6D2E002DB20F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C45B151DAC6D2E002DB20F /* LaunchScreen.storyboard */; };
 		D5C45B221DAC6D2E002DB20F /* LaunchAnimation_demoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C45B211DAC6D2E002DB20F /* LaunchAnimation_demoTests.m */; };
 		D5C45B2D1DAC6D2E002DB20F /* LaunchAnimation_demoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C45B2C1DAC6D2E002DB20F /* LaunchAnimation_demoUITests.m */; };
-		D5C45B3E1DAC80A7002DB20F /* CCLaunchAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C45B3D1DAC80A7002DB20F /* CCLaunchAnimation.m */; };
 		D5E050221DAE09C30037F74F /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E050211DAE09C30037F74F /* WKWebViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +41,8 @@
 		034774A7C86339B3B6A33959 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		673F6861B171A1D5C42AF8B0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A674031BD9606F3179881AE9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5728AD51F4FFC3300EF522B /* CCLaunchAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLaunchAnimation.h; sourceTree = "<group>"; };
+		D5728AD61F4FFC3300EF522B /* CCLaunchAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLaunchAnimation.m; sourceTree = "<group>"; };
 		D5C45B041DAC6D2E002DB20F /* LaunchAnimation_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaunchAnimation_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C45B081DAC6D2E002DB20F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D5C45B0A1DAC6D2E002DB20F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -57,8 +59,6 @@
 		D5C45B281DAC6D2E002DB20F /* LaunchAnimation_demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaunchAnimation_demoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C45B2C1DAC6D2E002DB20F /* LaunchAnimation_demoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchAnimation_demoUITests.m; sourceTree = "<group>"; };
 		D5C45B2E1DAC6D2E002DB20F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D5C45B3C1DAC80A7002DB20F /* CCLaunchAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLaunchAnimation.h; sourceTree = "<group>"; };
-		D5C45B3D1DAC80A7002DB20F /* CCLaunchAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLaunchAnimation.m; sourceTree = "<group>"; };
 		D5E050201DAE09C30037F74F /* WKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
 		D5E050211DAE09C30037F74F /* WKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +98,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D5728AD41F4FFC3300EF522B /* CCLaunchAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				D5728AD51F4FFC3300EF522B /* CCLaunchAnimation.h */,
+				D5728AD61F4FFC3300EF522B /* CCLaunchAnimation.m */,
+			);
+			path = CCLaunchAnimation;
+			sourceTree = "<group>";
+		};
 		D5C45AFB1DAC6D2E002DB20F = {
 			isa = PBXGroup;
 			children = (
@@ -123,8 +132,7 @@
 		D5C45B061DAC6D2E002DB20F /* LaunchAnimation_demo */ = {
 			isa = PBXGroup;
 			children = (
-				D5C45B3C1DAC80A7002DB20F /* CCLaunchAnimation.h */,
-				D5C45B3D1DAC80A7002DB20F /* CCLaunchAnimation.m */,
+				D5728AD41F4FFC3300EF522B /* CCLaunchAnimation */,
 				D5C45B0A1DAC6D2E002DB20F /* AppDelegate.h */,
 				D5C45B0B1DAC6D2E002DB20F /* AppDelegate.m */,
 				D5C45B0D1DAC6D2E002DB20F /* ViewController.h */,
@@ -356,9 +364,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5E050221DAE09C30037F74F /* WKWebViewController.m in Sources */,
-				D5C45B3E1DAC80A7002DB20F /* CCLaunchAnimation.m in Sources */,
 				D5C45B0F1DAC6D2E002DB20F /* ViewController.m in Sources */,
 				D5C45B0C1DAC6D2E002DB20F /* AppDelegate.m in Sources */,
+				D5728AD71F4FFC3300EF522B /* CCLaunchAnimation.m in Sources */,
 				D5C45B091DAC6D2E002DB20F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
