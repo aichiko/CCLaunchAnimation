@@ -11,7 +11,6 @@
 #import <QuartzCore/QuartzCore.h>
 #import <SDWebImage/SDWebImageManager.h>
 #import <SDWebImage/UIImage+MultiFormat.h>
-//#import "WKWebViewController.h"
 #import <Masonry.h>
 
 //gif图
