@@ -19,7 +19,7 @@ pod 'CCLaunchAnimation'
 
 If you are using Swift, be sure to add `use_frameworks!` and set your target to iOS 8+:
 ```
-platform :ios, '8.0'
+platform :ios, '7.0'
 use_frameworks!
 ```
 
