@@ -3,7 +3,7 @@
 
 ## Installation
 
-There are three ways to use SDWebImage in your project:
+There are three ways to use CCLaunchAnimation in your project:
 - using CocoaPods
 - by cloning the project into your repository
 
